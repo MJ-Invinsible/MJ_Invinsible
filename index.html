@@ -10,19 +10,25 @@
 </head>
 
 <body style="background-image: url(/MJ_Invinsible/bg-img.jpg);" class="w-full h-full bg-no-repeat bg-cover bg-fixed -z-60 ">
-  <nav class=" bg-transparent text-yellow-600 flex items-center fixed top-0 left-0 right-0">
-    <ul class="flex mx-auto items-center w-screen">
-      <img class="h-8 mx-2 justify-self-start" src="/MJ_Invinsible/logo.png" alt="Logo">
-      <a class="ml-auto sm:mx-10 cursor-pointer md:text-lg  sm:block 2xl:text-xl" href="#">Home</a>
-      <a class="ml-auto sm:mx-10 cursor-pointer md:text-lg  sm:block 2xl:text-xl" href="#">Projects</a>
-      <a class="ml-auto sm:mx-10 cursor-pointer md:text-lg  sm:block 2xl:text-xl" href="#">About Us</a>
-      <a class="ml-auto sm:mx-10 cursor-pointer md:text-lg  sm:block 2xl:text-xl" href="#">Contact Us</a>
-    </ul>
-  </nav>
+  <div class="flex mx-auto items-center w-screen justify-center fixed top-0 ">
+    <img class=" hide-menue h-12 sm:h-16 cursor-pointer "src="/MJ_Invinsible/logo.png" alt="Logo">
+  </div>
 
-  <div class="flex flex-col h-full">
-    <img class="mx-0 my-20 drop-shadow-2xl" src="/MJ_Invinsible/text-1.png" alt="MJ Invinsible">
-    <img class="w-4/6 mx-auto" src="/MJ_Invinsible/text-2.png" alt="Top Creator">
+  <div class="nav-bar bg-transparent w-full h-full hidden ">
+    <nav class="flex">
+      <ul class=" space-y-6 text-yellow-600 mt-14 mx-auto flex flex-col sm:mt-16 md:space-y-0 md:flex-row md:my-8 ">
+        <li class="mx-auto md:mx-16 md:text-base lg:text-lg lg:mx-20 xl:mx-22 cursor-pointer "><a href="#">Home</a></li>
+        <li class="mx-auto md:mx-16 md:text-base lg:text-lg lg:mx-20 xl:mx-22 cursor-pointer "><a href="#">Projects</a></li>
+        <li class="mx-auto md:mx-16 md:text-base lg:text-lg lg:mx-20 xl:mx-22 cursor-pointer "><a href="#">About Us</a></li>
+        <li class="mx-auto md:mx-16 md:text-base lg:text-lg lg:mx-20 xl:mx-22 cursor-pointer "><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="flex-1">
+    <div class="flex flex-col h-full">
+      <img class="mx-0 my-20 drop-shadow-2xl" src="/MJ_Invinsible/text-1.png" alt="MJ Invinsible">
+      <img class="w-4/6 mx-auto" src="/MJ_Invinsible/text-2.png" alt="Top Creator">
   </div>
 
   <div class="flex mt-32 mx-auto w-3/4 mb-10 flex-col lg:flex-row">
@@ -39,7 +45,7 @@
   </div>
 
   <div class="flex mt-20 mx-auto w-3/4 mb-10 flex-col lg:flex-row-reverse">
-    <img class="h-75 w-100 sm:w-80 sm:ml-44 md:mx-auto lg:w-2/6" src="/MJ_Invinsible/card-2.jpg" alt="card-1">
+    <img class="h-75 w-100 sm:w-80 sm:ml-44 md:mx-auto lg:w-2/6" src="/MJ_Invinsible/card-2.jpg" alt="card-2">
     <div class="flex flex-col mx-4">
       <div class="text-lg font-bold text-yellow-700 md:text-xl 2xl:text-xl  ">Top Software Developer</div>
       <p class="text-sm text-yellow-600 md:text-lg 2xl:text-2xl ">Lorem ipsum dolor, sit amet consectetur adipisicing
@@ -50,11 +56,20 @@
         voluptas minima consequatur consectetur labore!</p>
     </div>
   </div>>
-</body>
 
+</div>
+</body>
 </html>
 
+<script>
+  let btn = document.querySelector(".hide-menue")
+  let bar = document.querySelector('.nav-bar')
+  btn.addEventListener('click',()=>{
+    bar.classList.toggle('hidden')
+  })
+</script>
+
 <!-- 
-    Unsplash API : https://source.unsplash.com/1600x900/?nature
+    Unsplash API : https://source.unsplash.com/900x900/?coading,laptop
     text-yellow-600	color: rgb(202 138 4);
  -->
